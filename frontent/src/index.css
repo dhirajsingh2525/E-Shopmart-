@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@media all and (max-width: 650px) {
+     .nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: 0.5rem;
+     }
+     .img{
+        width: 20px;
+        height: 20px;
+     }
+     .card1{
+        display: flex;
+        flex-direction: column;
+     }
+     .card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+     }
+     .card-img{
+        height: 10vh;
+     }
+     .card-title{
+        font-size: 0.7rem;
+     }
+     .card-show{
+        display: flex;
+        flex-direction: column;
+     }
+     .card-show-img{
+        width: 70%;
+     }
+     .card-details-text{
+        font-size: 1rem;
+     }
+     .update-form{
+        width: 100%;
+     }
+     .update-form1{
+        font-size: 1rem;
+     }
+     .setting{
+        font-size: 1rem;
+     }
+
+
+}
