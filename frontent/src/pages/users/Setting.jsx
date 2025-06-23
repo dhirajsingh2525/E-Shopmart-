@@ -30,42 +30,65 @@ const Setting = () => {
         dispatch(asynclogoutuser(user.id))
     }
   return (
-    <div>
-        <form onSubmit={handleSubmit(updateHandler)} className='setting p-5 ww-full'>
-           <input
-           {...register("username")}
-            type="text"
-            placeholder='username'
-            className='w-full text-3xl border-b outline-0 p-2 mb-5'
-            />
-             <input
-           {...register("email")}
-            type="email"
-            placeholder='useremail'
-            className='w-full text-3xl border-b outline-0 p-2 mb-5'
-            />
-             <input
-           {...register("password")}
-            type="password"
-            placeholder='userpassword'
-            className='w-full text-3xl border-b outline-0 p-2 mb-5'
-            />
-            <button className='setting1 text-white text-3xl px-5 py-3 rounded bg-blue-400'>
-                updated user
-                </button>
-                <button onClick={logoutHandler}
-                 type='button'
-                  className='setting1 text-white text-3xl px-5 py-3 rounded bg-red-400'>
-                    Logout user
-                </button>
-                <br /> <br />
-                <button onClick={deleteHandler}
-                 type='button' 
-                className='setting1 text-white text-3xl px-5 py-3 rounded bg-red-600'>
-                    delete user
-                </button>
-        </form>
+   <div className="flex justify-center items-center px-4 py-6">
+      <form
+        onSubmit={handleSubmit(updateHandler)}
+        className="w-full max-w-lg bg-white shadow-lg shadow-blue-600 rounded-xl p-8 flex flex-col items-center gap-2"
+      >
+        {/* Profile Image */}
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+          alt="User Profile"
+          className="w-12 h-12 rounded-full shadow-md"
+        />
+
+        <h2 className="text-xl font-semibold text-gray-700">Account Settings</h2>
+
+        {/* Inputs */}
+        <input
+          {...register('username')}
+          type="text"
+          placeholder="Username"
+          className="w-full border-b border-gray-300 text-xl px-2 py-2 outline-none focus:border-blue-500 transition-all"
+        />
+        <input
+          {...register('email')}
+          type="email"
+          placeholder="Email"
+          className="w-full border-b border-gray-300 text-xl px-2 py-2 outline-none focus:border-blue-500 transition-all"
+        />
+        <input
+          {...register('password')}
+          type="password"
+          placeholder="Password"
+          className="w-full border-b border-gray-300 text-xl px-2 py-2 outline-none focus:border-blue-500 transition-all"
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white text-md py-1 rounded hover:bg-blue-600 transition-all"
+        >
+          Update Profile
+        </button>
+
+        <button
+          onClick={logoutHandler}
+          type="button"
+          className="w-full bg-yellow-500 text-white text-md py-1 rounded hover:bg-yellow-600 transition-all"
+        >
+          Logout
+        </button>
+
+        <button
+          onClick={deleteHandler}
+          type="button"
+          className="w-full bg-red-500 text-white text-md py-1 rounded hover:bg-red-600 transition-all"
+        >
+          Delete Account
+        </button>
+      </form>
     </div>
+
   )
 }
 

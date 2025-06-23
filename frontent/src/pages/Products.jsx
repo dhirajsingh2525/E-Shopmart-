@@ -38,15 +38,15 @@ const Products = () => {
      dataLength={products.length} 
      next={fetchProductData}
      hasMore={hasMore}
-     loader={<h4>Loading...</h4>}
-     endMessage={
-     <p style={{ textAlign: 'center' }}>
-        <b>Yay! You have seen it all</b>
-     </p>
-  }
+      loader={<p className="text-center py-4 text-gray-500">Loading more products...</p>}
+  endMessage={
+    <p className="text-center text-gray-500 mt-5">
+      <b>Yay! You have seen it all</b>
+    </p>
 
+  }
     >
-    <div className='card1 flex flex-wrap'>
+    <div className='card1 flex flex-wrap gap-5 mx-auto px-4 py-6 ml-7'>
         {products.map((product, i) => (
           <Suspense key={i} fallback={<h1>Loading...</h1>}>
             <ProductTemplate product={product}/>

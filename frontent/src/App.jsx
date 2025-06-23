@@ -14,7 +14,7 @@ const App = () => {
   }, [user])
 
   return (
-    <div className='py-4 px-[5%] bg-zinc-50'>
+    <div className='bg-zinc-50'>
       <Nav/>
       <Mainroutes />
       <ToastContainer />

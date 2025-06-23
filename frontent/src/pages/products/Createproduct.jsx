@@ -16,38 +16,38 @@ const Createproduct = () => {
         navigate('/');
     }
   return (
-    <div>
-         <form onSubmit={handleSubmit(submiteHandler)} className='p-5 w-full'>
+    <div className='w-full px-6 py-6'>
+         <form onSubmit={handleSubmit(submiteHandler)} className='p-5 w-full flex flex-col'>
            <input
           {...register("image")}
            type="url"
            placeholder='image'
-           className='w-full text-2xl outline-none border-b p-2 mb-5'
+           className='w-1/2 text-2xl outline-none border-b p-2 mb-5'
            />
           <input
           {...register("title")}
            type="text"
            placeholder='title'
-           className='w-full text-2xl outline-none border-b p-2 mb-5'
+           className='w-1/2 text-2xl outline-none border-b p-2 mb-5'
            />
           <input
           {...register("price")}
            type="text"
            placeholder='0.00'
-           className='w-full text-2xl outline-none border-b p-2 mb-5'
+           className='w-1/2 text-2xl outline-none border-b p-2 mb-5'
            />
               <input 
            {...register("category")}
            type="text"
            placeholder='category'
-            className='w-full text-2xl outline-none border-b p-2 mb-5'
+            className='w-1/2 text-2xl outline-none border-b p-2 mb-5'
             />
             <textarea {...register("description")} 
               type="text"
               placeholder='enter description here...'
-              className="w-full text-3xl border-b outline-0 p-2 mb-5"
+              className="w-1/2 text-3xl border-b outline-0 p-2 mb-5"
             ></textarea>
-            <button className='text-white text-3xl px-5 py-3 rounded bg-red-500'>create product</button>
+            <button className='w-1/2 text-white text-3xl px-5 py-3 rounded bg-red-500'>create product</button>
             </form>
     </div>
   )

@@ -55,7 +55,7 @@ const DetailsProduct = () => {
 
   return product ? (
     <div className='card-details w-full'>
-        <div className='card-show w-full flex justify-between'>
+        <div className='card-show px-[5%] w-full flex justify-between'>
               <img 
               className='card-show-img block max-auto h-[30vmax]'
               src={product?.image}

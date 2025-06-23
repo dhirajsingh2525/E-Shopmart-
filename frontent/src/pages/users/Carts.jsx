@@ -45,22 +45,31 @@ const Carts = () => {
   if (!cart.product) return null; 
 
   return (
-    <div key={i} className='flex justify-between items-center mb-5 shadow-emerald-500 shadow-md rounded p-5'>
-      <img src={cart.product.image} className='w-[10vmax] h-[10vmax]' alt="" />
+    <div key={i}    className="flex items-center justify-between gap-4 mb-5 shadow-md shadow-emerald-500 p-4 rounded-lg ">
+      <img src={cart.product.image}    className="w-24 h-24 object-contain rounded-md" alt="" />
       <h1>{cart.product.title}</h1>
       <div className='flex gap-2'>
-        <button onClick={() =>addcartHandler(i)} className='px-4 py-2 bg-black text-white'>+</button>
-        <span className='px-4 py-2 border'>{cart.quantity}</span>
-        <button onClick={() => subtractHandler(i)} className='px-4 py-2 bg-black text-white'>-</button>
+        <button
+         onClick={() =>addcartHandler(i)} 
+        className="w-20 h-10 bg-zinc-700 text-white rounded"
+        >+</button>
+        <span 
+        className="w-20 h-10 pt-2 border border-gray-300 rounded text-center"
+        >{cart.quantity}</span>
+        <button
+         onClick={() => subtractHandler(i)} 
+        className="w-20 h-10 bg-zinc-700 text-white rounded"
+         >-</button>
       </div>
-      <h3 onClick={() =>removecart(i)} className="cursor-pointer text-red-500 text-2xl">
+
+      <h3 onClick={() =>removecart(i)}  className="text-red-500 text-2xl hover:text-red-700">
         <i className="ri-close-line"></i>
         </h3>
     </div>
   );
 })
   return (
-    <div>{cartlist}</div>
+    <div className='px-6 py-6'>{user.cart.length>0 ? cartlist : "no cart added"}</div>
   )
 }
 
