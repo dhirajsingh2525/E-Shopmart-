@@ -40,7 +40,7 @@ const Products = () => {
      hasMore={hasMore}
       loader={<p className="text-center py-4 text-gray-500">Loading more products...</p>}
   endMessage={
-    <p className="text-center text-gray-500 mt-5">
+    <p className="infinite-text text-center text-gray-500 mt-5">
       <b>Yay! You have seen it all</b>
     </p>
 

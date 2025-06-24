@@ -7,26 +7,26 @@ const Nav = () => {
   return (
     <div className='nav w-full px-5 flex flex-wrap items-center justify-between font-semibold text-lg py-2 shadow bg-white'>
       <img className='img h-10' src="https://cdn-icons-png.flaticon.com/512/891/891419.png" alt="" />
-       <div className='flex gap-x-22'>
-         <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md px-4' : ''} to='/'>
+       <div className='nav1 flex gap-x-22'>
+         <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md' : ''} to='/'>
            Home 
         </NavLink>
         {user ?  (
         <>
-            <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md px-4' : ''} to='/settings'>
+            <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md' : ''} to='/settings'>
            Account setting
         </NavLink>
          {user?.isAdmin && (
-           <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md px-4' : ''} to='/createproduct'>
+           <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md' : ''} to='/createproduct'>
            create products
         </NavLink>
         )}
-         <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md px-4' : ''} to='/carts'>
+         <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md' : ''} to='/carts'>
            carts
         </NavLink>
         </>
   ) : (
-     <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md px-4' : ''} to='/signin'>
+     <NavLink className={(e) => e.isActive ? 'bg-red-200 rounded-md' : ''} to='/signin'>
            signin
         </NavLink>
   )

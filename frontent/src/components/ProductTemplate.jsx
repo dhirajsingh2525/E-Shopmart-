@@ -13,11 +13,11 @@ const ProductTemplate = ({product}) => {
               <img className='card-img h-[30vh] mx-auto block' src={product.image} alt="" />
               <h1 className='card-title mt-3 text-2xl'>{product.title.slice(0,15)}...</h1>
               <p className='text-red-300'>${product.price}</p>
-              <p>{product.description.slice(0, 80)}...</p>
+              <p className='card-desc'>{product.description.slice(0, 80)}...</p>
               <div className='mt-2 p-2 w-full flex justify-between items-center'>
-                  <button className='rounded hover:bg-emerald-600 transition-all'>Add to cart 👉
+                  <button className='card-btn rounded hover:bg-emerald-600 transition-all'>Add to cart 👉
                   </button>
-                  <Link className='text-sm text-blue-600 hover:underline' to={`/product-info/${product.id}`}>
+                  <Link className='card-btn text-sm text-blue-600 hover:underline' to={`/product-info/${product.id}`}>
                     more info
                   </Link>
               </div>

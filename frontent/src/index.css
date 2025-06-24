@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 780px) {
+   .head{
+      width: 100%;
+   }
      .nav{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        font-size: 0.5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+        font-size: 10px;
+        padding: 20px;
+     }
+     .nav1{
+      display: flex;
+      align-items: center;
+      /* justify-content: flex-start; */
+      gap: 5px;
      }
      .img{
         width: 20px;
@@ -15,9 +25,11 @@
      .card1{
         display: flex;
         flex-direction: column;
+        padding: 8px; 
      }
      .card{
         width: 100%;
+        height: 200px;
         display: flex;
         flex-direction: column;
      }
@@ -26,6 +38,16 @@
      }
      .card-title{
         font-size: 0.7rem;
+     }
+     .card-desc{
+      font-size: 0.6rem;
+     }
+     .card-btn{
+      font-size: 0.7rem;
+     }
+     .infinite-text{
+      text-align: center;
+      font-size: 0.8rem;
      }
      .card-show{
         display: flex;
@@ -46,6 +68,40 @@
      .setting{
         font-size: 1rem;
      }
-
+     .createp{
+      width: 400px;
+     }
+     .create-p-input{
+       width: 100%;
+     }
+     .create-p-btn{
+      width: 100%;
+     }
+     .addcart{
+      width: 100%;
+     }
+     .addcart-img{
+      height: 80px;
+     }
+     .addcart-title{
+      font-size: 0.5rem;
+     }
+     .addcart-btn{
+      width: 25px;
+      height: 25px;
+      padding-top: 0px;
+     }
+     .signin-f{
+      width: 100%;
+     }
+     .signin-f-input{
+      width: 100%;
+     }
+      .signup-f{
+      width: 100%;
+     }
+     .signup-f-input{
+      width: 100%;
+     }
 
 }
